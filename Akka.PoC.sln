@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.PoC.HelloWorld", "Akka
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.PoC.Remote.Deployer", "Akka.PoC.Remote.Deployer\Akka.PoC.Remote.Deployer.csproj", "{1A4737C8-0CCF-4E94-B250-97DF7BC223B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.PoC.Cluster.SeedNode", "Akka.PoC.Cluster.SeedNode\Akka.PoC.Cluster.SeedNode.csproj", "{244DE02E-F48A-4076-80C9-9ADD8D08FBBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.PoC.Cluster.NonSeedNode", "Akka.PoC.Cluster.NonSeedNode\Akka.PoC.Cluster.NonSeedNode.csproj", "{63C5B7E1-B398-474E-81E0-0F50EEBAED12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.PoC.Cluster.ProducerNode", "Akka.PoC.Cluster.ProducerNode\Akka.PoC.Cluster.ProducerNode.csproj", "{EC3ACEA7-A1DA-425C-96D0-09876CEB4CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Poc.Cluster.Director", "Akka.Poc.Cluster.Director\Akka.Poc.Cluster.Director.csproj", "{2DE7B5F7-D16F-4DCE-A356-E10776E4E869}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +41,22 @@ Global
 		{1A4737C8-0CCF-4E94-B250-97DF7BC223B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A4737C8-0CCF-4E94-B250-97DF7BC223B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A4737C8-0CCF-4E94-B250-97DF7BC223B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244DE02E-F48A-4076-80C9-9ADD8D08FBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244DE02E-F48A-4076-80C9-9ADD8D08FBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244DE02E-F48A-4076-80C9-9ADD8D08FBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244DE02E-F48A-4076-80C9-9ADD8D08FBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C5B7E1-B398-474E-81E0-0F50EEBAED12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C5B7E1-B398-474E-81E0-0F50EEBAED12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C5B7E1-B398-474E-81E0-0F50EEBAED12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C5B7E1-B398-474E-81E0-0F50EEBAED12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3ACEA7-A1DA-425C-96D0-09876CEB4CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3ACEA7-A1DA-425C-96D0-09876CEB4CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3ACEA7-A1DA-425C-96D0-09876CEB4CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3ACEA7-A1DA-425C-96D0-09876CEB4CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE7B5F7-D16F-4DCE-A356-E10776E4E869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE7B5F7-D16F-4DCE-A356-E10776E4E869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE7B5F7-D16F-4DCE-A356-E10776E4E869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE7B5F7-D16F-4DCE-A356-E10776E4E869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

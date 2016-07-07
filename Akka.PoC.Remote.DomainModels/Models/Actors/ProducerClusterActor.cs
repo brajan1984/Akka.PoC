@@ -8,18 +8,16 @@ using System.Threading.Tasks;
 
 namespace Akka.PoC.Remote.DomainModels.Models.Actors
 {
-    public class ProducerActor : ReceiveActor
+    public class ProducerClusterActor : ReceiveActor
     {
-        private List<IActorRef> _remoteActors;
+        //private List<IActorRef> _remoteActors;
         private int _episodeCounter;
         private ICancelable _episodeTask;
         private Guid _guid;
-        private int _current = 0;
 
-        public ProducerActor(List<IActorRef> actors)
+        public ProducerClusterActor()
         {
             _guid = Guid.NewGuid();
-            _remoteActors = actors;
 
             this.Receive<EpisodeDoneResponse>(response =>
             {
@@ -28,13 +26,14 @@ namespace Akka.PoC.Remote.DomainModels.Models.Actors
 
             this.Receive<EpisodeOrder>(order =>
             {
-                _remoteActors[_current].Tell(new EpisodeRequest(_episodeCounter++, _guid.ToString()));
-            });
-        }
+                var cluster = Cluster.Cluster.Get(Context.System);
 
-        public void IncreaseProductivity(IActorRef actor)
-        {
-            _remoteActors.Add(actor);
+                var sel = cluster.System.ActorSelection("user/director");
+
+                sel.Tell(new EpisodeRequest(_episodeCounter++, _guid.ToString()));
+
+                Console.WriteLine("Episode {0} request sent", _episodeCounter);
+            });
         }
 
         protected override void PreStart()
