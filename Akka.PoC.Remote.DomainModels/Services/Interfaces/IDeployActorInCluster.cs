@@ -9,7 +9,7 @@ namespace Akka.PoC.Remote.DomainModels.Services.Interfaces
 {
     public interface IDeployActorInCluster
     {
-        void Deploy<T>(string clusterName, string role)
+        IActorRef DeployActor<T>(string clusterName, string role)
             where T : IInternalActor;
     }
 }

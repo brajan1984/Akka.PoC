@@ -19,8 +19,9 @@ namespace Akka.PoC.Cluster.NonSeedNode
         {
             var deployer = new DeployActorInCluster();
 
-            deployer.Deploy<SimpleClusterListener>("ClusterPoC", "clusterListener");
-            
+            //deployer.Deploy<SimpleClusterListener>("ClusterPoC", "clusterListener");
+            deployer.DeployActor<ProducerClusterActor>("webcrawler", "producer");
+
             Console.ReadKey();
         }
     }

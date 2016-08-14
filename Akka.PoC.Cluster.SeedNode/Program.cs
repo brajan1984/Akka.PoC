@@ -33,7 +33,7 @@ namespace Akka.PoC.Cluster.SeedNode
                     .WithFallback(section.AkkaConfig);
 
                 //create an Akka system
-                var system = ActorSystem.Create("ClusterPoC", config);
+                var system = ActorSystem.Create("webcrawler", config);
 
                 //create an actor that handles cluster domain events
                 system.ActorOf(Props.Create(typeof(SimpleClusterListener)), "clusterListener");

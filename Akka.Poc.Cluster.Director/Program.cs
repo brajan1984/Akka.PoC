@@ -5,16 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Akka.Actor;
 
 namespace Akka.Poc.Cluster.Director
 {
     class Program
     {
+        protected 
         static void Main(string[] args)
         {
             var deployer = new DeployActorInCluster();
 
-            deployer.Deploy<DirectorClusterActor>("ClusterPoC", "director");
+            deployer.DeployActor<DirectorClusterActor>("webcrawler", "director");
 
             Console.ReadKey();
         }

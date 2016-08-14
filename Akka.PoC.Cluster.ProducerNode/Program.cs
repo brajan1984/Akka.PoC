@@ -14,7 +14,7 @@ namespace Akka.PoC.Cluster.ProducerNode
         {
             var deployer = new DeployActorInCluster();
 
-            deployer.Deploy<ProducerClusterActor>("ClusterPoC", "producer");
+            deployer.Deploy("webcrawler", "producer");
 
             Console.ReadKey();
         }
